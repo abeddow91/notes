@@ -5,11 +5,13 @@ As a programmer,
 So I can record something I need to remember,
 I can create a new note
 ```
+
 ```
 As a programmer
 So I can find the note I want
 I can see a list of my notes
 ```
+
 ```
 As a programmer
 So I can easily see what's in my notes
