@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend, single page app</title>
+</head>
+
+<body>
+  <form onsubmit="addNewNote()">
+    <textarea type="text" id="new_note" name="note" value="enter your note" ></textarea>
+    <button id="input_form" type="button">save</button>
+  </form>
+  <br><br>
+  <div id="notes">
+  </div>
+
+  <div id="note_text"></div>
+
+  <script>
+  var array =[]
+  refreshNotes();
+  makeUrlChangeShowNoteForCurrentPage();
+
+  function refreshNotes() {
+
+    var result = ""
+    for (var i = 0; i < array.length; i++){
+      result = result + "<a href='#" + array[i] + "'>"+ array[i]+"</a> ";
+    }
+    document.getElementById("notes").innerHTML = result
+  };
+
+  function makeUrlChangeShowNoteForCurrentPage() {
+    window.addEventListener("hashchange", showNoteForCurrentPage);
+  };
+  document.getElementById("input_form").addEventListener('click', function() {
+    addNewNote()
+  });
+
+  function addNewNote() {
+    //  notesarray.push(document.getElementById("new_note"))
+    var alertText = document.getElementById("new_note").value
+    array.push(alertText)
+    console.log(array)
+    refreshNotes();
+  };
+
+  function showNoteForCurrentPage() {
+    showNote(getNoteFromUrl(window.location));
+  };
+
+  function showNote(note) {
+    document
+    .getElementById("note_text")
+    .innerHTML = note;
+  };
+
+  function getNoteFromUrl(location) {
+    return location.hash.split("#")[1];
+  };
+
+  </script>
+</body>
+</html>
