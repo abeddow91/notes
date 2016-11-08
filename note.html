@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Frontend, single page app</title>
-</head>
+  <script src="app.js/notebook.js"></script>
+
+
+
 <style >
   #note_text {
     line-height: 1;
@@ -30,6 +33,7 @@
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /
   }
 </style>
+</head>
 <body>
   <form onsubmit="addNewNote()">
     <textarea id="new_note" rows="10" cols="50" type="text" name="note" value="enter your note"></textarea>
@@ -86,5 +90,6 @@
   </script>
 
   <script src="spec/notebook_spec.js"></script>
+  <script src="app.js/logic.js"></script>
 </body>
 </html>
