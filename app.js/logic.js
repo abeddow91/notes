@@ -6,7 +6,7 @@ function refreshNotes() {
 
   var result = ""
   for (var i = 0; i < notebook.notes.length; i++){
-    result = result + "<a href='#" + notebook.notes[i] + "'>"+ notebook.abbreviation(notebook.notes[i])+"</a><br>   ";
+    result = result + "<a href='#" + notebook.notes[i] +"' id='link_"+i +"'>" + notebook.abbreviation(notebook.notes[i])+"</a><br>   ";
   }
   document.getElementById("notes").innerHTML = result
 };
