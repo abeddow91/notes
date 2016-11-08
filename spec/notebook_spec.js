@@ -6,8 +6,14 @@ function testCreateNewNotebook() {
 
 testCreateNewNotebook();
 
-function testNotebook() {
-  var notepad = new Notebook();
-  notepad.create();
-  assert.isTrue(notepad.pages == 5);
+function testAbbreviatedLinkOnPage() {
+  document.getElementById("new_note").value = "I must remember to buy eggs at the ship."
+  document.getElementById("input_form").click()
+  var notes = document.getElementById("notes").innerHTML
+  assert.isTrue(notes.indexOf("I must remember to b") !== -1)
+}
+testAbbreviatedLinkOnPage()
+
+function testFullLinkOnPage() {
+
 }
