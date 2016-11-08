@@ -36,14 +36,16 @@
 </head>
 <body>
   <form onsubmit="addNewNote()">
-    <textarea rows="10" cols="50" type="text" id="new_note" name="note" value="enter your note" ></textarea>
-    <button id="input_form" type="button">save</button>
+    <textarea id="new_note" rows="10" cols="50" type="text" name="note" value="enter your note"></textarea>
+    <button id="input_form" name="click_button" type="button">save</button>
   </form>
   <br><br>
   <div id="notes">
   </div>
   <br>
   <div id="note_text"></div>
+  <script src="spec/assert.js"></script>
+  <script src="spec/notebook_spec.js"></script>
   <script src="app.js/logic.js"></script>
 </body>
 </html>
