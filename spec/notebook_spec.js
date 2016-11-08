@@ -36,16 +36,24 @@ function runTestSuite(){
 
 function fullNoteSuite(){
   function testLinkShowsFullNote(){
+    console.log(1)
       document.getElementById("new_note").value = "I left my bike at the bus station."
+      console.log(2)
       document.getElementById("input_form").click();
+      console.log(3)
       document.getElementById("link_0").click();
-      assert.isTrue(document.getElementById('note_text').innerHTML == notes.note[0])
+      console.log('link click')
+      var fullNote = document.getElementById('note_text').innerHTML
+      console.log('check note')
+      assert.isTrue(fullNote == "I left my bike at the bus station.")
 
     };
+    //research jasmine done
     // function saveNoteText(){
     //   var fullNote = document.getElementById('note_text').innerHTML
     // }
     // testLinkShowsFullNote(function(){
     //   console.log(assert.isTrue(document.getElementById('note_text').innerHTML == notes.note[0]))
     // });
+    testLinkShowsFullNote();
 };

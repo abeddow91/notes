@@ -13,6 +13,7 @@ function refreshNotes() {
 
 function makeUrlChangeShowNoteForCurrentPage() {
   window.addEventListener("hashchange", showNoteForCurrentPage);
+  console.log('set up hash change handler')
 };
 document.getElementById("input_form").addEventListener('click', function() {
   addNewNote()
@@ -21,11 +22,13 @@ document.getElementById("input_form").addEventListener('click', function() {
 function addNewNote() {
   //  notesarray.push(document.getElementById("new_note"))
   var alertText = document.getElementById("new_note").value
+  console.log('new note')
   notebook.notes.push(alertText)
   refreshNotes();
 };
 
 function showNoteForCurrentPage() {
+  console.log('show note for current page')
   showNote(getNoteFromUrl(window.location));
 };
 
