@@ -1,7 +1,14 @@
 function Notebook() {
-this.pages = 0
+this.notes = [];
  }
 
-Notebook.prototype.create = function() {
-this.pages = 5
+
+
+Notebook.prototype.abbreviation = function(note) {
+   return note.slice(0,20);
+};
+
+
+Notebook.prototype.createNote = function(note) {
+this.notes.push(note);
 };
