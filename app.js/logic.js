@@ -19,7 +19,6 @@ document.getElementById("input_form").addEventListener('click', function() {
 });
 
 function addNewNote() {
-  //  notesarray.push(document.getElementById("new_note"))
   var alertText = document.getElementById("new_note").value
   notebook.notes.push(alertText)
   refreshNotes();

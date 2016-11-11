@@ -1,0 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Handlee';
+
+body {
+  font-size: 30px;
+  text-transform: donwcase;
+  background: url('https://articulate-heroes.s3.amazonaws.com/1106.notepads531x7.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: #25365C;
+  font-family: 'Handlee', cursive;
+}
